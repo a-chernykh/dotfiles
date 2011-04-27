@@ -1,0 +1,11 @@
+export PATH=/Users/akhkharu/.gem/ruby/1.8/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=~/bin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+export EDITOR=vim
+export PATH=/Applications/MAMP/bin/php5/bin/:/Applications/MAMP/Library/bin/:$PATH
+export USER_BASH_COMPLETION_DIR=~/.bash_completion.d
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export PATH=$PATH:/opt/mongodb-osx-i386-1.4.2/bin
+export GIT_EDITOR='mate -wl1'
