@@ -38,4 +38,9 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
-PS1="[\u@\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]] "
+if [ $(id -u) -eq 0 ];
+then
+  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]] # "
+else
+  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]] $ "
+fi
