@@ -1,5 +1,5 @@
 alias grep='grep --color'
-alias ll='ls -lha'
+alias ll='ls -lh'
 alias rm='rm -i'
 alias tf='tail -f'
 alias g='grep'
