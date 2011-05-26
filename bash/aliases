@@ -1,3 +1,4 @@
+alias grep='grep --color'
 alias e="mate"
 alias ll="ls -lh"
 alias rm="rm -i"

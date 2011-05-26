@@ -40,7 +40,7 @@ BWHITE='\e[47m'
 
 if [ $(id -u) -eq 0 ];
 then
-  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]] # "
+  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]]# "
 else
-  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]] $ "
+  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]]$ "
 fi
