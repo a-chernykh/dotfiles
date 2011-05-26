@@ -1,7 +1,12 @@
 alias grep='grep --color'
-alias e="mate"
-alias ll="ls -lh"
-alias rm="rm -i"
+alias ll='ls -lha'
+alias rm='rm -i'
+alias tf='tail -f'
+alias g='grep'
+alias m='mate'
+alias o='open'
+
+# git aliases
 alias ga='git add'
 alias gl='git pull origin master'
 alias gp='git push origin master'
@@ -12,15 +17,8 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# rails aliases
 alias rsc='script/console'
 alias rss='script/server'
 alias rsg='script/generate'
-alias et='mate .'
-alias ett='mate app/ config/ db/ lib/ public/ features/ spec/ test/'
-alias sshh='ssh home.akhkharu.ru'
-alias tf='tail -f'
-alias zf='/usr/local/zend/share/ZendFramework/bin/zf.sh'
-alias sshh='ssh akhkharu@home.akhkharu.ru'
-alias g='grep'
-alias m='mate'
-alias o='open'
