@@ -5,6 +5,7 @@ alias tf='tail -f'
 alias g='grep'
 alias m='mate'
 alias o='open'
+alias h='history'
 
 # git aliases
 alias ga='git add'

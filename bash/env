@@ -4,3 +4,4 @@ export EDITOR=vim
 export USER_BASH_COMPLETION_DIR=~/.bash_completion.d
 export CLICOLOR=1
 export GIT_EDITOR='mate -wl1'
+export NODE_PATH=/usr/local/lib/node:$NODE_PATH
