@@ -1,4 +1,4 @@
-export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/Users/akhkharu/.gem/ruby/1.8/bin:$PATH
+export PATH=/usr/local/bin:~/bin:/opt/local/bin:/opt/local/sbin:/Users/akhkharu/.gem/ruby/1.8/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export EDITOR=vim
 export USER_BASH_COMPLETION_DIR=~/.bash_completion.d
