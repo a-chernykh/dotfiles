@@ -38,9 +38,14 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
+function parse_git_branch {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
 if [ $(id -u) -eq 0 ];
 then
-  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]]# "
+  PS1="[\h \w \[$RED\]\$(parse_git_branch)\[$NO_COLOR\]]# "
 else
-  PS1="[\h \w \[$RED\]\$(__git_ps1 '%s')\[$NO_COLOR\]]$ "
+  PS1="[\h \w \[$RED\]\$(parse_git_branch)\[$NO_COLOR\]]$ "
 fi

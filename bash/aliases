@@ -4,6 +4,7 @@ alias rm='rm -i'
 alias tf='tail -f'
 alias g='grep'
 alias m='mate'
+alias mr='mate Capfile Gemfile Procfile Rakefile app/ config/ db/ features/ lib/ public/ spec/ test/'
 alias o='open'
 alias h='history'
 
