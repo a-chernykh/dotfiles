@@ -1,2 +1,5 @@
 defscrollback 5000
 startup_message off
+
+hardstatus alwayslastline
+hardstatus string "%{= }%-w%{= bk}%50>%n %t%{-}%+w%<"
