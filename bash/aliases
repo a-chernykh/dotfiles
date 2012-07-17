@@ -3,8 +3,6 @@ alias ll='ls -lh'
 alias rm='rm -i'
 alias tf='tail -f'
 alias g='grep'
-alias m='mate'
-alias mr='mate Capfile Gemfile Procfile Rakefile app/ config/ db/ features/ lib/ public/ spec/ test/ vendor/assets/'
 alias o='open'
 alias h='history'
 
@@ -19,12 +17,10 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias glg='git log --stat --max-count=5'
+alias glg='git log --stat'
 
 # rails aliases
-alias rsc='script/console'
-alias rss='script/server'
-alias rsg='script/generate'
+alias r='rails'
 
-# old ones
-alias clear='echo "NO!"'
+# screen aliases
+alias ss='screen -a -A -d -RR ${PWD##*/}'
