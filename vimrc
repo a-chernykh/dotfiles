@@ -11,3 +11,5 @@ set expandtab
 set number
 set numberwidth=5
 
+set hlsearch
+set incsearch
