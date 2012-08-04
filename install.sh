@@ -10,4 +10,5 @@ ln -s ${script_dir}/irbrc ~/.irbrc
 ln -s ${script_dir}/screenrc ~/.screenrc
 ln -s ${script_dir}/gemrc ~/.gemrc
 ln -s ${script_dir}/vimrc ~/.vimrc
+ln -s ${script_dir}/gitconfig ~/.gitconfig
 
