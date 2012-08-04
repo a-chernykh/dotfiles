@@ -1,3 +1,4 @@
 *.sublime-*
 .rvmrc
 .powrc
+*.swp
