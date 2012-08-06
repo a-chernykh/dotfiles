@@ -11,4 +11,5 @@ ln -s ${script_dir}/gemrc ~/.gemrc
 ln -s ${script_dir}/vimrc ~/.vimrc
 ln -s ${script_dir}/gitconfig ~/.gitconfig
 ln -s ${script_dir}/gitignore ~/.gitignore_global
+ln -s ${script_dir}/caprc ~/.caprc
 
