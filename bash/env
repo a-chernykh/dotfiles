@@ -1,1 +1,1 @@
-export PATH=/usr/local/sbin:/usr/local/bin:~/bin:/Users/akhkharu/.gem/ruby/1.8/bin:~/bin:$PATH MANPATH=/opt/local/share/man:$MANPATH EDITOR=vim CLICOLOR=1 GIT_EDITOR='subl -w' NODE_PATH=/usr/local/lib/node:$NODE_PATH HISTCONTROL=ignoreboth HISTSIZE=1000
+export PATH=/usr/local/sbin:/usr/local/bin:~/bin:$PATH EDITOR=vim CLICOLOR=1 GIT_EDITOR='subl -w' NODE_PATH=/usr/local/lib/node:$NODE_PATH HISTCONTROL=ignoreboth HISTSIZE=1000

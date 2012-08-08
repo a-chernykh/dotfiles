@@ -37,6 +37,9 @@ alias glg='git log --stat'
 make-completion-wrapper _git _git_checkout_mine git checkout
 complete -o bashdefault -o default -o nospace -F _git_checkout_mine gco
 
+make-completion-wrapper _git _git_push_mine git push
+complete -o bashdefault -o default -o nospace -F _git_push_mine gp
+
 # rails aliases
 alias r='rails'
 
