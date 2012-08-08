@@ -1,3 +1,6 @@
+export HISTCONTROL=ignoreboth HISTSIZE=10000
+shopt -s histappend
+
 NO_COLOR='\e[0m'
 RED='\e[0;31m'
 GREEN='\e[0;32m'
