@@ -12,4 +12,4 @@ ln -s ${script_dir}/vimrc ~/.vimrc
 ln -s ${script_dir}/gitconfig ~/.gitconfig
 ln -s ${script_dir}/gitignore ~/.gitignore_global
 ln -s ${script_dir}/caprc ~/.caprc
-
+ln -s ${script_dir}/rspec ~/.rspec
