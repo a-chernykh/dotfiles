@@ -22,3 +22,5 @@
   excludesfile = /Users/akhkharu/.gitignore_global
 [alias]
   co = checkout
+[github]
+	user = AndreyChernyh
