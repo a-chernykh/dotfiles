@@ -4,6 +4,4 @@ startup_message off
 hardstatus alwayslastline
 hardstatus string "%{= }%-w%{= bk}%50>%n %t%{-}%+w%< %= %{b}%H %l %{d}| %{y}%d.%m.%Y %c"
 
-#screen -t 'development.log' 	0 tail -f log/development.log
-#screen -t 'rails console'	 	1
-#screen -t 'bash' 				2
+shelltitle '$ |bash'
