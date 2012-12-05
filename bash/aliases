@@ -45,3 +45,5 @@ alias r='rails'
 
 # screen aliases
 alias ss='screen -a -A -d -RR ${PWD##*/}'
+
+alias be='bundle exec'
