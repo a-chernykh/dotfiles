@@ -1,8 +1,5 @@
 *.sublime-*
-.rvmrc
 .powrc
-*.swp
 .tags
 .tags_sorted_by_file
 .DS_Store
-zeus.json
