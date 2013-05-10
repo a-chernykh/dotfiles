@@ -1,4 +1,4 @@
-export HISTCONTROL=ignoreboth HISTSIZE=10000
+export HISTCONTROL=ignoreboth HISTSIZE=10000 HISTTIMEFORMAT='%F %T '
 shopt -s histappend
 
 function parse_git_branch {
@@ -6,4 +6,7 @@ function parse_git_branch {
   echo ${ref#refs/heads/}
 }
 
-PS1="\033k\033\134[\u@\h \[$GREEN\]\w\[$NO_COLOR\] \[$RED\]\$(parse_git_branch)\[$NO_COLOR\]]\n\\$ "
+PS1BRANCH="\[$RED\]\$(parse_git_branch)\[$NO_COLOR\]"
+PS1RVM="\[$BLUE\]\$(~/.rvm/bin/rvm-prompt)\[$NO_COLOR\]"
+
+PS1="\033k\033\134[\u@\h $PS1BRANCH $PS1RVM \[$GREEN\]\w\[$NO_COLOR\]]\n\\$ "
