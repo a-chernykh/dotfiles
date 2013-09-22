@@ -20,7 +20,10 @@
   helper = osxkeychain
 [core]
   excludesfile = /Users/akhkharu/.gitignore_global
+	autocrlf = input
 [alias]
   co = checkout
 [github]
-	user = AndreyChernyh
+  user = AndreyChernyh
+[push]
+  default = simple
