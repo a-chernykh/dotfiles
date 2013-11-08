@@ -21,6 +21,7 @@
 [core]
   excludesfile = /Users/akhkharu/.gitignore_global
 	autocrlf = input
+	editor = reattach-to-user-namespace subl -n -w
 [alias]
   co = checkout
 [github]
