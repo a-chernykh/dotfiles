@@ -1,12 +1,20 @@
 #!/bin/bash
 
-script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+set -e
 
-include_line="[ -f ${script_dir}/bashrc ] && . ${script_dir}/bashrc"
-(grep "${include_line}" ~/.bashrc > /dev/null 2>&1) || (echo "${include_line}" >> ~/.bashrc)
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-dotfiles=( irbrc screenrc gemrc vimrc gitconfig gitignore_global caprc rspec rvmrc .tmux.conf )
+INCLUDE_LINE="[ -f ${SCRIPT_DIR}/bashrc ] && . ${SCRIPT_DIR}/bashrc"
+(grep "${INCLUDE_LINE}" ~/.bashrc > /dev/null 2>&1) || (echo "${INCLUDE_LINE}" >> ~/.bashrc)
+
+dotfiles=( irbrc screenrc gemrc vimrc gitconfig gitignore_global caprc rspec rvmrc tmux.conf )
 for dotfile in "${dotfiles[@]}"
 do
-  ln -sf ${script_dir}/${dotfile} ~/.${dotfile}
+  ln -sf ${SCRIPT_DIR}/${dotfile} ~/.${dotfile}
 done
+
+SUBLIME_CONFIG_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+if [ -d "$SUBLIME_CONFIG_DIR" ]; then
+  ln -sf "$SCRIPT_DIR/sublime/Package Control.sublime-settings" "$SUBLIME_CONFIG_DIR/Package Control.sublime-settings"
+  ln -sf "$SCRIPT_DIR/sublime/Preferences.sublime-settings" "$SUBLIME_CONFIG_DIR/Preferences.sublime-settings"
+fi

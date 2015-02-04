@@ -9,3 +9,4 @@ Simply run ```./install.sh```. It will include itself by adding new line into ``
 * .gitconfig
 * .gitignore_global
 
+It will also copy `Sublime Text 3` configuration.
