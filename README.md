@@ -9,4 +9,7 @@ Simply run ```./install.sh```. It will include itself by adding new line into ``
 * .gitconfig
 * .gitignore_global
 
-It will also copy `Sublime Text 3` configuration.
+It will also install config files for:
+
+* Sublime Text 3
+* iTerm (need to specify path to the config in iTerm Settings)
