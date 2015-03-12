@@ -44,10 +44,10 @@
 		"public/assets",
 		"test/reports"
 	],
-	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"RubyTest"
 	],
 	"reveal-on-activate": true,
 	"tab_size": 2,
