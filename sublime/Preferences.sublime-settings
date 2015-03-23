@@ -27,6 +27,7 @@
 		".svn",
 		".git",
 		".hg",
+		".idea",
 		"CVS",
 		"tmp",
 		"log",
