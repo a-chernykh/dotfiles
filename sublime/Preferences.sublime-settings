@@ -46,8 +46,8 @@
 	],
 	"ignored_packages":
 	[
-		"Vintage",
-		"RubyTest"
+		"RubyTest",
+		"Vintage"
 	],
 	"reveal-on-activate": true,
 	"tab_size": 2,

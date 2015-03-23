@@ -5,6 +5,8 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"Git",
+		"GoSublime",
 		"Package Control",
 		"RSpec",
 		"Ruby Slim",
