@@ -4,7 +4,10 @@
 	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"Better CoffeeScript",
+		"EditorConfig",
+		"Git",
 		"Package Control",
 		"RSpec",
 		"Ruby Slim",
