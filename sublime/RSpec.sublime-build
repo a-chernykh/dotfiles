@@ -1,5 +1,6 @@
 {
-	"cmd": ["/Users/andreychernih/.rbenv/shims/bundle", "exec", "rspec", "--drb", "-I ${file_path}", "$file"],
+	"cmd": ["~/.rbenv/shims/bundle exec rspec --drb -I ${file_path} $file"],
+  "shell": true,
 	"file_regex": "# ([A-Za-z:0-9_./ ]+rb):([0-9]+)",
 	"working_dir": "${project_path:${folder:${file_path}}}",
 	"selector": "source.ruby.rspec",
