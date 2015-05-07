@@ -20,10 +20,9 @@
   helper = osxkeychain
 [core]
   excludesfile = /Users/akhkharu/.gitignore_global
-	editor = reattach-to-user-namespace subl -n -w
 [alias]
   co = checkout
 [github]
-  user = AndreyChernyh
+  user = andreychernih
 [push]
   default = simple

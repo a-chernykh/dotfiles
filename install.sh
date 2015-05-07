@@ -14,3 +14,4 @@ do
 done
 
 install_sublime.sh
+install_vim.sh
