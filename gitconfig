@@ -19,7 +19,7 @@
 [credential]
   helper = osxkeychain
 [core]
-  excludesfile = /Users/akhkharu/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [alias]
   co = checkout
 [github]
