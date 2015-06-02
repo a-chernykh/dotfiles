@@ -57,3 +57,6 @@ set incsearch
 
 " Remove trailing spaces on every write
 autocmd BufWritePre * :%s/\s\+$//e
+
+set foldmethod=indent
+set foldlevel=20
