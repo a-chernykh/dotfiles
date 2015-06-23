@@ -34,8 +34,14 @@ inoremap <D-8> <C-O>8gt
 map <D-9> 9gt
 inoremap <D-9> <C-O>9gt
 
-map ,t :w<CR>:!bundle exec rspec --no-color --drb %<CR>
-map ,T :w<CR>:exec("!bundle exec rspec --no-color --drb "  . expand("%") . ":" . line("."))<CR>
+function RunSpec(file)
+  let @z = "!bundle exec rspec --no-color --drb " . a:file
+  execute @z
+endfunction
+
+map ,t :w<CR>:call RunSpec(expand("%"))<CR>
+map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
+map ,r :w<CR>:execute @z<CR>
 
 map <c-n> :NERDTreeFind<CR>
 
