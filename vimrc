@@ -43,7 +43,17 @@ map ,t :w<CR>:call RunSpec(expand("%"))<CR>
 map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
 map ,r :w<CR>:execute @z<CR>
 
+" NerdTree
+
 map <c-n> :NERDTreeFind<CR>
+
+" MultiCursor
+
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-y>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 set nocompatible
 
@@ -69,3 +79,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 set foldmethod=indent
 set foldlevel=20
+
+set background=dark
+colorscheme solarized
