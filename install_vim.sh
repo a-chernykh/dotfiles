@@ -12,3 +12,4 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 [ -d ~/.vim/bundle/vim-multiple-cursors ] || git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
 [ -d ~/.vim/bundle/vim-go ] || git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 [ -d ~/.vim/bundle/vim-colors-solarized ] || git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+[ -d ~/.vim/bundle/vim-coffee-script ] || git clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script
