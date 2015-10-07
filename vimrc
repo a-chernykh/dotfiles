@@ -34,10 +34,20 @@ inoremap <D-8> <C-O>8gt
 map <D-9> 9gt
 inoremap <D-9> <C-O>9gt
 
-function RunSpec(file)
-  let @z = "!bundle exec rspec --no-color --drb " . a:file
-  execute @z
-endfunction
+let g:drb=1
+if !exists("*RunSpec")
+  function RunSpec(file)
+    if g:drb
+      let rspec_args='--no-color --drb'
+    else
+      let rspec_args='--no-color'
+    endif
+
+    let @z = "!bundle exec rspec " . rspec_args . " " . a:file
+
+    execute @z
+  endfunction
+endif
 
 map ,t :w<CR>:call RunSpec(expand("%"))<CR>
 map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
@@ -84,5 +94,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 set foldmethod=indent
 set foldlevel=20
 
-set background=dark
+set background=light
 colorscheme solarized
