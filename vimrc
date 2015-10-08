@@ -35,6 +35,7 @@ map <D-9> 9gt
 inoremap <D-9> <C-O>9gt
 
 let g:drb=1
+let g:rspec_cmd="bundle exec rspec"
 if !exists("*RunSpec")
   function RunSpec(file)
     if g:drb
@@ -43,8 +44,7 @@ if !exists("*RunSpec")
       let rspec_args='--no-color'
     endif
 
-    let @z = "!bundle exec rspec " . rspec_args . " " . a:file
-
+    let @z = "!" . g:rspec_cmd . " " . rspec_args . " " . a:file
     execute @z
   endfunction
 endif
@@ -57,12 +57,10 @@ map ,r :w<CR>:execute @z<CR>
 set wildignore+=*/log/*,*/tmp/*,*.swp
 
 " NerdTree
-
 map <c-n> :NERDTreeFind<CR>
 " let NERDTreeShowHidden=1
 
 " MultiCursor
-
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-y>'
 let g:multi_cursor_prev_key='<C-p>'
