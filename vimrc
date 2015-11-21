@@ -94,3 +94,9 @@ set foldlevel=20
 
 set background=light
 colorscheme solarized
+
+" Indentation
+filetype indent on
+set smartindent
+
+set noswapfile
