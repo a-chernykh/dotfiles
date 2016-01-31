@@ -52,6 +52,7 @@ endif
 map ,t :w<CR>:call RunSpec(expand("%"))<CR>
 map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
 map ,r :w<CR>:execute @z<CR>
+map <CR> :nohl<CR>
 
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp
