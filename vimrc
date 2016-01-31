@@ -110,3 +110,8 @@ map <D-r> :RRB<CR>
 
 " Syntax highlighting
 au BufNewFile,BufRead *.coffee.erb set filetype=coffee
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
