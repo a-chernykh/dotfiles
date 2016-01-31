@@ -34,4 +34,4 @@ for url in ${PLUGINS[@]}; do
 done
 
 rm -rf ~/.vim/UltiSnips/
-ln -s `pwd`/UltiSnips ~/.vim/UltiSnips
+ln -fs `pwd`/UltiSnips ~/.vim/UltiSnips
