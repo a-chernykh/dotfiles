@@ -100,3 +100,12 @@ filetype indent on
 set smartindent
 
 set noswapfile
+
+" Browser reload
+" https://github.com/mkitt/browser-refresh.vim
+let g:RefreshRunningBrowserDefault = 'chrome'
+let g:RefreshRunningBrowserReturnFocus = 0
+map <D-r> :RRB<CR>
+
+" Syntax highlighting
+au BufNewFile,BufRead *.coffee.erb set filetype=coffee
