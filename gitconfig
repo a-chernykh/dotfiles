@@ -26,3 +26,5 @@
   user = andreychernih
 [push]
   default = simple
+[merge]
+  tool = opendiff
