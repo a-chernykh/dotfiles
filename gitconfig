@@ -1,6 +1,6 @@
 [user]
-  name = Andrey Chernih
-  email = andrey.chernih@gmail.com
+	name = Andrey Chernih
+	email = andrey.chernih@gmail.com
 [color]
   ui = auto
 [color "branch"]
@@ -22,8 +22,6 @@
   excludesfile = ~/.gitignore_global
 [alias]
   co = checkout
-[github]
-  user = andreychernih
 [push]
   default = simple
 [merge]

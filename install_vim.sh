@@ -5,15 +5,33 @@ set -e
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-[ -d ~/.vim/bundle/vim-sensible ] || git clone git://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
-[ -d ~/.vim/bundle/ctrlp.vim ] || git clone https://github.com/kien/ctrlp.vim ~/.vim/bundle/ctrlp.vim
-[ -d ~/.vim/bundle/ctrlp-cmatcher ] || git clone https://github.com/JazzCore/ctrlp-cmatcher ~/.vim/bundle/ctrlp-cmatcher
-[ -d ~/.vim/bundle/nerdtree ] || git clone https://github.com/scrooloose/nerdtree ~/.vim/bundle/nerdtree
-[ -d ~/.vim/bundle/vim-multiple-cursors ] || git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
-[ -d ~/.vim/bundle/vim-go ] || git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-[ -d ~/.vim/bundle/vim-colors-solarized ] || git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
-[ -d ~/.vim/bundle/vim-coffee-script ] || git clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script
+PLUGINS=(
+  'https://github.com/tpope/vim-sensible'
+  'https://github.com/kien/ctrlp.vim'
+  'https://github.com/JazzCore/ctrlp-cmatcher'
+  'https://github.com/scrooloose/nerdtree'
+  'https://github.com/terryma/vim-multiple-cursors'
+  'https://github.com/fatih/vim-go'
+  'https://github.com/altercation/vim-colors-solarized'
+  'https://github.com/kchmck/vim-coffee-script'
+  'https://github.com/LucHermitte/lh-vim-lib'
+  'https://github.com/LucHermitte/local_vimrc'
+  'https://github.com/mkitt/browser-refresh.vim'
+  'https://github.com/slim-template/vim-slim'
+  'https://github.com/SirVer/ultisnips'
+)
 
-# Support for local vim configuration (_vimrc_local.vim)
-[ -d ~/.vim/bundle/lh-vim-lib ] || git clone git@github.com:LucHermitte/lh-vim-lib.git ~/.vim/bundle/lh-vim-lib
-[ -d ~/.vim/bundle/local_vimrc ] || git clone git@github.com:LucHermitte/local_vimrc.git ~/.vim/bundle/local_vimrc
+for url in ${PLUGINS[@]}; do
+  plugin=$(basename $url)
+  dir="$HOME/.vim/bundle/$plugin"
+
+  if [ -d $dir ]; then
+    echo "Skipping $plugin"
+  else
+    echo "Installing $plugin"
+    git clone $url $dir
+  fi
+done
+
+rm -rf ~/.vim/UltiSnips/
+ln -fs `pwd`/UltiSnips ~/.vim/UltiSnips
