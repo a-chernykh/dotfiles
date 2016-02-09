@@ -17,10 +17,10 @@ set foldmethod=indent
 set foldlevel=20
 
 " Keymaps
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
+" inoremap <Left>  <NOP>
+" inoremap <Right> <NOP>
+" inoremap <Up>    <NOP>
+" inoremap <Down>  <NOP>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -35,9 +35,9 @@ let g:rspec_cmd="bundle exec rspec"
 if !exists("*RunSpec")
   function RunSpec(file)
     if g:drb
-      let rspec_args='--no-color --drb'
+      let rspec_args='--drb'
     else
-      let rspec_args='--no-color'
+      let rspec_args=''
     endif
 
     let @z = "!" . g:rspec_cmd . " " . rspec_args . " " . a:file
@@ -50,7 +50,7 @@ map ,r :w<CR>:execute @z<CR>
 map <CR> :nohl<CR>
 
 " ignore
-set wildignore+=*/log/*,*/tmp/*,*.swp
+set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*
 
 " NerdTree
 map <c-n> :NERDTreeFind<CR>
