@@ -50,7 +50,7 @@ map ,r :w<CR>:execute @z<CR>
 map <CR> :nohl<CR>
 
 " ignore
-set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*
+set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*
 
 " NerdTree
 map <c-n> :NERDTreeFind<CR>
