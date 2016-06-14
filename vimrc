@@ -30,7 +30,7 @@ nnoremap <C-l> <C-w>l
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " RSpec runner
-let g:drb=1
+let g:drb=0
 let g:rspec_cmd="bundle exec rspec"
 if !exists("*RunSpec")
   function RunSpec(file)
