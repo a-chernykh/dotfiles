@@ -49,6 +49,9 @@ map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
 map ,r :w<CR>:execute @z<CR>
 map <CR> :nohl<CR>
 
+" Copy current file path to clipboard
+map ,p :execute "!echo %\|pbcopy"<CR>
+
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*
 
