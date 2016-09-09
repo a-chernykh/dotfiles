@@ -50,7 +50,7 @@ map ,r :w<CR>:execute @z<CR>
 map <CR> :nohl<CR>
 
 " ignore
-set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*
+set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*
 
 " NerdTree
 map <c-n> :NERDTreeFind<CR>
@@ -82,7 +82,7 @@ set smartindent
 " https://github.com/mkitt/browser-refresh.vim
 let g:RefreshRunningBrowserDefault = 'chrome'
 let g:RefreshRunningBrowserReturnFocus = 0
-map <D-r> :RRB<CR>
+map ,b :RRB<CR>
 
 " Syntax highlighting
 au BufNewFile,BufRead *.coffee.erb set filetype=coffee

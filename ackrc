@@ -1,3 +1,4 @@
 --ignore-file=ext:log
 --ignore-file=is:tags
 --ignore-dir=coverage
+--ignore-dir=.idea
