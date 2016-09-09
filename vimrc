@@ -30,7 +30,7 @@ nnoremap <C-l> <C-w>l
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " RSpec runner
-let g:drb=1
+let g:drb=0
 let g:rspec_cmd="bundle exec rspec"
 if !exists("*RunSpec")
   function RunSpec(file)
@@ -48,6 +48,9 @@ map ,t :w<CR>:call RunSpec(expand("%"))<CR>
 map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
 map ,r :w<CR>:execute @z<CR>
 map <CR> :nohl<CR>
+
+" Copy current file path to clipboard
+map ,p :execute "!echo %\|pbcopy"<CR>
 
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*
