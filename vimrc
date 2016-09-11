@@ -40,7 +40,8 @@ if !exists("*RunSpec")
       let rspec_args=''
     endif
 
-    let @z = "!" . g:rspec_cmd . " " . rspec_args . " " . a:file
+    let rspec_current_cmd = g:rspec_cmd . " " . rspec_args . " " . a:file
+    let @z = "!echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
     execute @z
   endfunction
 endif
