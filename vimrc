@@ -56,7 +56,15 @@ map ,p :execute "!echo %\|pbcopy"<CR>
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*
 
 " NerdTree
-map <c-n> :NERDTreeFind<CR>
+function OpenNerdTree()
+  let curbuf = bufname("%")
+  if curbuf != ""
+    execute ":NERDTreeFind"
+  else
+    execute ":NERDTree"
+  endif
+endfunction
+map <c-n> :call OpenNerdTree()<CR>
 " let NERDTreeShowHidden=1
 
 " MultiCursor
