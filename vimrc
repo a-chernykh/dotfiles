@@ -40,7 +40,8 @@ if !exists("*RunSpec")
       let rspec_args=''
     endif
 
-    let @z = "!" . g:rspec_cmd . " " . rspec_args . " " . a:file
+    let rspec_current_cmd = g:rspec_cmd . " " . rspec_args . " " . a:file
+    let @z = "!echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
     execute @z
   endfunction
 endif
@@ -53,7 +54,7 @@ map <CR> :nohl<CR>
 map ,p :execute "!echo %\|pbcopy"<CR>
 
 " ignore
-set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*
+set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*
 
 " NerdTree
 function OpenNerdTree()
@@ -93,7 +94,7 @@ set smartindent
 " https://github.com/mkitt/browser-refresh.vim
 let g:RefreshRunningBrowserDefault = 'chrome'
 let g:RefreshRunningBrowserReturnFocus = 0
-map <D-r> :RRB<CR>
+map ,b :RRB<CR>
 
 " Syntax highlighting
 au BufNewFile,BufRead *.coffee.erb set filetype=coffee
@@ -103,3 +104,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
