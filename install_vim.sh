@@ -18,7 +18,6 @@ PLUGINS=(
   'https://github.com/LucHermitte/local_vimrc'
   'https://github.com/mkitt/browser-refresh.vim'
   'https://github.com/slim-template/vim-slim'
-  'https://github.com/SirVer/ultisnips'
   'https://github.com/airblade/vim-gitgutter'
   'https://github.com/mkitt/tabline.vim.git'
 )
@@ -34,6 +33,3 @@ for url in ${PLUGINS[@]}; do
     git clone $url $dir
   fi
 done
-
-rm -rf ~/.vim/UltiSnips/
-ln -fs `pwd`/UltiSnips ~/.vim/UltiSnips
