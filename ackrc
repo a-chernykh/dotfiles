@@ -3,3 +3,4 @@
 --ignore-dir=coverage
 --ignore-dir=.idea
 --ignore-dir=tmp
+--ignore-dir=.bundle_cache
