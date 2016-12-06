@@ -20,6 +20,7 @@ PLUGINS=(
   'https://github.com/slim-template/vim-slim'
   'https://github.com/airblade/vim-gitgutter'
   'https://github.com/mkitt/tabline.vim.git'
+  'https://github.com/hashivim/vim-terraform.git'
 )
 
 for url in ${PLUGINS[@]}; do
