@@ -107,3 +107,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
+
+" Configure syntax highlighting for non-standard extensions
+autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
