@@ -67,6 +67,7 @@ function OpenNerdTree()
 endfunction
 map <c-n> :call OpenNerdTree()<CR>
 " let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 
 " MultiCursor
 let g:multi_cursor_use_default_mapping=0
