@@ -54,7 +54,7 @@ map <CR> :nohl<CR>
 map ,p :execute "!echo %\|pbcopy"<CR>
 
 " ignore
-set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*
+set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*,*/node_modules/*
 
 " NerdTree
 function OpenNerdTree()
