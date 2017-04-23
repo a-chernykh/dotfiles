@@ -111,3 +111,6 @@ imap <c-s> <Esc><c-s>
 
 " Configure syntax highlighting for non-standard extensions
 autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
