@@ -83,8 +83,8 @@ let g:go_fmt_command = "goimports"
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Theme
-set background=light
-colorscheme solarized
+" set background=light
+" colorscheme solarized
 
 " Indentation
 filetype indent on
