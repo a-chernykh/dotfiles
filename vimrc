@@ -83,8 +83,8 @@ let g:go_fmt_command = "goimports"
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Theme
-set background=light
-colorscheme solarized
+" set background=light
+" colorscheme solarized
 
 " Indentation
 filetype indent on
@@ -111,3 +111,7 @@ imap <c-s> <Esc><c-s>
 
 " Configure syntax highlighting for non-standard extensions
 autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+nnoremap <c-l> :Ack "\b<C-R><C-W>\b"<CR>
