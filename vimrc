@@ -111,7 +111,11 @@ imap <c-s> <Esc><c-s>
 
 " Configure syntax highlighting for non-standard extensions
 autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap <c-l> :Ack "\b<C-R><C-W>\b"<CR>
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
