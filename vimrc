@@ -115,7 +115,7 @@ autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
-nnoremap <c-l> :Ack "\b<C-R><C-W>\b"<CR>
+nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
