@@ -27,7 +27,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" ctrlp
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+let g:ctrlp_show_hidden = 1
 
 " RSpec runner
 let g:drb=0
