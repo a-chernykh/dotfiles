@@ -80,8 +80,10 @@ let g:multi_cursor_quit_key='<Esc>'
 
 " vim-go
 let g:go_fmt_command = "goimports"
+let g:go_jump_to_error = 0
 autocmd FileType go map ,d :GoDef<CR>
 autocmd FileType go map ,t :GoTest<CR>
+autocmd FileType go map ,b :GoBuild<CR>
 
 " Remove trailing spaces on every write
 autocmd BufWritePre * :%s/\s\+$//e
