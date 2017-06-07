@@ -83,6 +83,7 @@ let g:go_fmt_command = "goimports"
 let g:go_jump_to_error = 0
 autocmd FileType go map ,d :GoDef<CR>
 autocmd FileType go map ,t :GoTest<CR>
+autocmd FileType go map ,T :GoTestFunc<CR>
 autocmd FileType go map ,b :GoBuild<CR>
 
 " Remove trailing spaces on every write
