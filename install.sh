@@ -11,4 +11,5 @@ do
 done
 
 ./install_vim.sh
+./install_packages.sh
 ./install_gems.sh

@@ -31,7 +31,10 @@ nnoremap <C-l> <C-w>l
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_show_hidden = 1
 
-" RSpec runner
+" global key mappings
+map <CR> :nohl<CR>
+
+" RSpec runner ruby
 let g:drb=0
 let g:rspec_cmd="bundle exec rspec"
 if !exists("*RunSpec")
@@ -47,10 +50,9 @@ if !exists("*RunSpec")
     execute @z
   endfunction
 endif
-map ,t :w<CR>:call RunSpec(expand("%"))<CR>
-map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
-map ,r :w<CR>:execute @z<CR>
-map <CR> :nohl<CR>
+autocmd FileType ruby map ,t :w<CR>:call RunSpec(expand("%"))<CR>
+autocmd FileType ruby map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
+autocmd FileType ruby map ,r :w<CR>:execute @z<CR>
 
 " Copy current file path to clipboard
 map ,p :execute "!echo %\|pbcopy"<CR>
@@ -78,13 +80,14 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
-" vim-go
+" vim-go golang go
 let g:go_fmt_command = "goimports"
 let g:go_jump_to_error = 0
-autocmd FileType go map ,d :GoDef<CR>
 autocmd FileType go map ,t :GoTest<CR>
 autocmd FileType go map ,T :GoTestFunc<CR>
+autocmd FileType go map ,d :GoDef<CR>
 autocmd FileType go map ,b :GoBuild<CR>
+autocmd FileType go map ,c :!gotags -R . > tags<CR>
 
 " Remove trailing spaces on every write
 autocmd BufWritePre * :%s/\s\+$//e
