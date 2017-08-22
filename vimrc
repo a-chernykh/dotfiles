@@ -131,3 +131,6 @@ nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
 let g:javascript_plugin_jsdoc = 1
 
 autocmd FileType javascript map ,c :!ctags --exclude=node_modules --exclude=dist -R .<CR>
+
+autocmd FileType ruby map ,c :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
+autocmd FileType ruby map ,C :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
