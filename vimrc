@@ -26,6 +26,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" Copy current file path to clipboard
+map ,p :execute "!echo %\|pbcopy"<CR>
+
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
+" Jump to definition in new tab by Ctrl-o
+nnoremap <C-o> <C-w><C-]><C-w>T
 
 " ctrlp
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
@@ -54,8 +63,6 @@ autocmd FileType ruby map ,t :w<CR>:call RunSpec(expand("%"))<CR>
 autocmd FileType ruby map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
 autocmd FileType ruby map ,r :w<CR>:execute @z<CR>
 
-" Copy current file path to clipboard
-map ,p :execute "!echo %\|pbcopy"<CR>
 
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*,*/node_modules/*
@@ -114,10 +121,6 @@ au BufNewFile,BufRead *.coffee.erb set filetype=coffee
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv
-imap <c-s> <Esc><c-s>
 
 " Configure syntax highlighting for non-standard extensions
 autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
