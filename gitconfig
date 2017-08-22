@@ -26,3 +26,5 @@
   default = simple
 [merge]
   tool = opendiff
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
