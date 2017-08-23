@@ -1,0 +1,6 @@
+*.log
+tags
+coverage/
+.idea/
+tmp/
+.bundle_cache/
