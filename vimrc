@@ -127,13 +127,18 @@ autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,conf
 autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 
 " Ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
 
-" vim-javascript js javascript
+" vim-javascript js javascript jsx
 let g:javascript_plugin_jsdoc = 1
+let g:jsx_ext_required = 0
 
 autocmd FileType javascript map ,c :!ctags --exclude=node_modules --exclude=dist -R .<CR>
+
+
 
 autocmd FileType ruby map ,c :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
 autocmd FileType ruby map ,C :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
