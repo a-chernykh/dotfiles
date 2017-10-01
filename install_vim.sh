@@ -12,7 +12,6 @@ PLUGINS=(
   'https://github.com/scrooloose/nerdtree'
   'https://github.com/terryma/vim-multiple-cursors'
   'https://github.com/fatih/vim-go'
-  'https://github.com/altercation/vim-colors-solarized'
   'https://github.com/kchmck/vim-coffee-script'
   'https://github.com/LucHermitte/lh-vim-lib'
   'https://github.com/LucHermitte/local_vimrc'
@@ -24,6 +23,7 @@ PLUGINS=(
   'https://github.com/mileszs/ack.vim.git'
   'https://github.com/pangloss/vim-javascript.git'
   'https://github.com/mxw/vim-jsx.git'
+  'https://github.com/morhetz/gruvbox.git'
 )
 
 for url in ${PLUGINS[@]}; do

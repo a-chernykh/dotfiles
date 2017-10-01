@@ -100,8 +100,7 @@ autocmd FileType go map ,c :!gotags -R . > tags<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Theme
-" set background=light
-" colorscheme solarized
+colorscheme gruvbox
 
 " Indentation
 filetype indent on
@@ -137,8 +136,6 @@ let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
 autocmd FileType javascript map ,c :!ctags --exclude=node_modules --exclude=dist -R .<CR>
-
-
 
 autocmd FileType ruby map ,c :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
 autocmd FileType ruby map ,C :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
