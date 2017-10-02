@@ -10,6 +10,7 @@ set shiftwidth=2
 set expandtab
 set number
 set numberwidth=5
+set relativenumber
 set hlsearch
 set incsearch
 set noswapfile
