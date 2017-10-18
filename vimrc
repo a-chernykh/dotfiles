@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set rtp+=/usr/local/opt/fzf
+
 " General settings
 syntax on
 set nocompatible
@@ -38,8 +40,11 @@ imap <c-s> <Esc><c-s>
 nnoremap <C-o> <C-w><C-]><C-w>T
 
 " ctrlp
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-let g:ctrlp_show_hidden = 1
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+" let g:ctrlp_show_hidden = 1
+
+" fzf
+nnoremap <c-p> :Files<CR>
 
 " global key mappings
 map <CR> :nohl<CR>
