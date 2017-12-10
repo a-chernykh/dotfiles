@@ -18,6 +18,7 @@ set incsearch
 set noswapfile
 set foldmethod=indent
 set foldlevel=20
+set autoread
 
 " Keymaps
 " inoremap <Left>  <NOP>
@@ -75,11 +76,10 @@ set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_
 
 " NerdTree
 function OpenNerdTree()
-  let curbuf = bufname("%")
-  if curbuf != ""
-    execute ":NERDTreeFind"
+  if g:NERDTree.IsOpen()
+    execute ":NERDTreeClose"
   else
-    execute ":NERDTree"
+    execute ":NERDTreeFind"
   endif
 endfunction
 map <c-n> :call OpenNerdTree()<CR>
