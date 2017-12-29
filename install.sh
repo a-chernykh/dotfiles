@@ -10,6 +10,6 @@ do
   ln -sf ${SCRIPT_DIR}/${dotfile} ~/.${dotfile}
 done
 
-./install_vim.sh
 ./install_packages.sh
+./install_vim.sh
 ./install_gems.sh
