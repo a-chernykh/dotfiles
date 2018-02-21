@@ -12,7 +12,7 @@ set shiftwidth=2
 set expandtab
 set number
 set numberwidth=5
-set relativenumber
+"set relativenumber
 set hlsearch
 set incsearch
 set noswapfile
@@ -39,10 +39,6 @@ imap <c-s> <Esc><c-s>
 
 " Jump to definition in new tab by Ctrl-o
 nnoremap <C-o> <C-w><C-]><C-w>T
-
-" ctrlp
-" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-" let g:ctrlp_show_hidden = 1
 
 " fzf
 nnoremap <c-p> :Files<CR>
@@ -73,6 +69,7 @@ autocmd FileType ruby map ,r :w<CR>:execute @z<CR>
 
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*,*/node_modules/*
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore log --ignore tmp --ignore spec/vcr_fixtures --ignore spec/fixtures/vcr_cassette --ignore bundle/cache --ignore node_modules -g ""'
 
 " NerdTree
 function OpenNerdTree()
