@@ -20,6 +20,9 @@ set foldmethod=indent
 set foldlevel=20
 set autoread
 
+" spellcheck
+set spellfile=~/.vim/spell/en.utf-8.add
+
 " Keymaps
 " inoremap <Left>  <NOP>
 " inoremap <Right> <NOP>
@@ -42,6 +45,8 @@ nnoremap <C-o> <C-w><C-]><C-w>T
 
 " fzf
 nnoremap <c-p> :Files<CR>
+nnoremap ,m :BTags<CR>
+nnoremap ,a :Tags<CR>
 
 " global key mappings
 map <CR> :nohl<CR>
@@ -100,9 +105,11 @@ autocmd FileType go map ,b :GoBuild<CR>
 autocmd FileType go map ,c :!gotags -R . > tags<CR>
 
 " Remove trailing spaces on every write
-autocmd BufWritePre * :%s/\s\+$//e
+let leave_spaces_in = [ 'md', 'markdown' ]
+autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
 " Theme
+let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
 
 " Indentation
@@ -138,7 +145,7 @@ nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
-autocmd FileType javascript map ,c :!ctags --exclude=node_modules --exclude=dist -R .<CR>
+autocmd FileType javascript map ,c :!ctags --sort=yes --exclude=node_modules --exclude=dist -R .<CR>
 
-autocmd FileType ruby map ,c :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
-autocmd FileType ruby map ,C :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
+autocmd FileType ruby map ,c :!ctags --sort=yes -R --languages=ruby --exclude=.git --exclude=log .<CR>
+autocmd FileType ruby map ,C :!ctags --sort=yes -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
