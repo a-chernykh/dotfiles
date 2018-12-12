@@ -11,6 +11,7 @@ PACKAGES=(
   csshx
   ctags
   ctop
+  cmake
   direnv
   fzf
   git
@@ -18,6 +19,7 @@ PACKAGES=(
   go
   gotags
   gradle
+  graphviz
   grep
   htop
   hub
@@ -29,12 +31,16 @@ PACKAGES=(
   openssl
   pidof
   pssh
+  protobuf
   rbenv
+  redis
   ruby-build
+  sqlite
   thefuck
   tmux
   tree
   vim
+  unrar
   watch
   wget
   yarn
