@@ -24,6 +24,7 @@ PLUGINS=(
   'https://github.com/pangloss/vim-javascript.git'
   'https://github.com/mxw/vim-jsx.git'
   'https://github.com/tmux-plugins/vim-tmux-focus-events.git'
+  'https://github.com/leafgarland/typescript-vim.git'
 )
 
 for url in ${PLUGINS[@]}; do
