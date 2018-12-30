@@ -40,6 +40,9 @@ nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
 
+" ALE
+nnoremap <c-l> :ALEToggle<CR>
+
 " Jump to definition in new tab by Ctrl-o
 nnoremap <C-o> <C-w><C-]><C-w>T
 
@@ -77,14 +80,8 @@ set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore log --ignore tmp --ignore spec/vcr_fixtures --ignore spec/fixtures/vcr_cassette --ignore bundle/cache --ignore node_modules -g ""'
 
 " NerdTree
-function OpenNerdTree()
-  if g:NERDTree.IsOpen()
-    execute ":NERDTreeClose"
-  else
-    execute ":NERDTreeFind"
-  endif
-endfunction
-map <c-n> :call OpenNerdTree()<CR>
+map <C-n> :NERDTreeToggle<CR>
+map <C-g> :NERDTreeFind<CR>
 " let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 
