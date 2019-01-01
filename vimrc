@@ -29,6 +29,10 @@ set spellfile=~/.vim/spell/en.utf-8.add
 " inoremap <Up>    <NOP>
 " inoremap <Down>  <NOP>
 
+" Word movements
+" Adds \w \b \e mapping to move through upperCamelCase words
+call camelcasemotion#CreateMotionMappings('<leader>')
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -45,7 +49,7 @@ nnoremap ,l :ALEToggle<CR>
 nnoremap ,d :ALEGoToDefinition<CR>
 
 " Jump to definition in new tab by Ctrl-o
-nnoremap <C-o> <C-w><C-]><C-w>T
+" nnoremap <C-o> <C-w><C-]><C-w>T
 
 " fzf
 nnoremap <c-p> :Files<CR>
