@@ -13,3 +13,4 @@ done
 ./install_packages.sh
 ./install_vim.sh
 ./install_gems.sh
+./install_js.sh
