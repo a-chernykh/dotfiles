@@ -2,5 +2,5 @@
 
 set -eu
 
-gem install gem-ctags
+gem install gem-ctags solargraph
 gem ctags
