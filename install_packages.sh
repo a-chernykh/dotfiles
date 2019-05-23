@@ -36,6 +36,7 @@ PACKAGES=(
   redis
   ruby-build
   sqlite
+  telnet
   thefuck
   tmux
   tree

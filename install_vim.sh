@@ -11,10 +11,12 @@ PLUGINS=(
   'https://github.com/LucHermitte/lh-vim-lib'
   'https://github.com/LucHermitte/local_vimrc'
   'https://github.com/scrooloose/nerdtree'
+  'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
   'https://github.com/airblade/vim-gitgutter'
   'https://github.com/mkitt/tabline.vim.git'
   'https://github.com/mileszs/ack.vim.git'
   'https://github.com/morhetz/gruvbox.git'
+  'https://github.com/junegunn/fzf'
   'https://github.com/junegunn/fzf.vim.git'
 
   'https://github.com/fatih/vim-go'

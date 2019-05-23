@@ -20,6 +20,9 @@ set foldmethod=indent
 set foldlevel=20
 set autoread
 
+" remap ESC button
+inoremap jj <Esc>
+
 " spellcheck
 set spellfile=~/.vim/spell/en.utf-8.add
 
@@ -47,6 +50,7 @@ imap <c-s> <Esc><c-s>
 " ALE
 nnoremap ,l :ALEToggle<CR>
 nnoremap ,d :ALEGoToDefinition<CR>
+" let g:ale_ruby_solargraph_executable="bin/solargraph"
 
 " Jump to definition in new tab by Ctrl-o
 " nnoremap <C-o> <C-w><C-]><C-w>T
@@ -102,6 +106,10 @@ endfunction
 map <c-n> :call OpenNerdTree()<CR>
 " let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeCascadeSingleChildDir = 0
+let NERDTreeCascadeOpenSingleChildDir = 0
 
 " MultiCursor
 let g:multi_cursor_use_default_mapping=0
