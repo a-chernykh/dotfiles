@@ -49,8 +49,9 @@ imap <c-s> <Esc><c-s>
 
 " ALE
 nnoremap ,l :ALEToggle<CR>
+nnoremap ,f :ALEFix<CR>
 nnoremap ,d :ALEGoToDefinition<CR>
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 " Jump to definition in new tab by Ctrl-o
 " nnoremap <C-o> <C-w><C-]><C-w>T
