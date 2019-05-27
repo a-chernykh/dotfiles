@@ -50,7 +50,7 @@ imap <c-s> <Esc><c-s>
 " ALE
 nnoremap ,l :ALEToggle<CR>
 nnoremap ,d :ALEGoToDefinition<CR>
-" let g:ale_ruby_solargraph_executable="bin/solargraph"
+let g:ale_fix_on_save = 1
 
 " Jump to definition in new tab by Ctrl-o
 " nnoremap <C-o> <C-w><C-]><C-w>T
@@ -62,26 +62,6 @@ nnoremap ,a :Tags<CR>
 
 " global key mappings
 map <CR> :nohl<CR>
-
-" RSpec runner ruby
-let g:drb=0
-let g:rspec_cmd="bundle exec rspec"
-if !exists("*RunSpec")
-  function RunSpec(file)
-    if g:drb
-      let rspec_args='--drb'
-    else
-      let rspec_args=''
-    endif
-
-    let rspec_current_cmd = g:rspec_cmd . " " . rspec_args . " " . a:file
-    let @z = "!echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
-    execute @z
-  endfunction
-endif
-autocmd FileType ruby map ,t :w<CR>:call RunSpec(expand("%"))<CR>
-autocmd FileType ruby map ,T :w<CR>:call RunSpec(expand("%") . ":" . line("."))<CR>
-autocmd FileType ruby map ,r :w<CR>:execute @z<CR>
 
 
 " ignore
@@ -110,6 +90,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeCascadeSingleChildDir = 0
 let NERDTreeCascadeOpenSingleChildDir = 0
+let NERDTreeIgnore=['\.pyc$']
 
 " MultiCursor
 let g:multi_cursor_use_default_mapping=0
@@ -121,15 +102,6 @@ let g:multi_cursor_quit_key='<Esc>'
 " vim-go golang go
 let g:go_fmt_command = "goimports"
 let g:go_jump_to_error = 0
-autocmd FileType go map ,t :GoTest<CR>
-autocmd FileType go map ,T :GoTestFunc<CR>
-autocmd FileType go map ,d :GoDef<CR>
-autocmd FileType go map ,b :GoBuild<CR>
-autocmd FileType go map ,c :!gotags -R . > tags<CR>
-
-" Remove trailing spaces on every write
-let leave_spaces_in = [ 'md', 'markdown' ]
-autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
 " Theme
 let g:gruvbox_guisp_fallback = "bg"
@@ -139,6 +111,9 @@ colorscheme gruvbox
 filetype indent on
 set smartindent
 
+" Remove trailing spaces on every write
+let leave_spaces_in = [ 'md', 'markdown' ]
+autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
 " Browser reload
 " https://github.com/mkitt/browser-refresh.vim
@@ -168,7 +143,18 @@ nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
-autocmd FileType javascript map ,c :!ctags --sort=yes --exclude=node_modules --exclude=dist -R .<CR>
+let g:drb=0
+let g:rspec_cmd="bundle exec rspec"
+if !exists("*RunSpec")
+  function RunSpec(file)
+    if g:drb
+      let rspec_args='--drb'
+    else
+      let rspec_args=''
+    endif
 
-autocmd FileType ruby map ,c :!ctags --sort=yes -R --languages=ruby --exclude=.git --exclude=log .<CR>
-autocmd FileType ruby map ,C :!ctags --sort=yes -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
+    let rspec_current_cmd = g:rspec_cmd . " " . rspec_args . " " . a:file
+    let @z = "!echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
+    execute @z
+  endfunction
+endif

@@ -4,7 +4,9 @@ set -eu
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 ln -sf $(pwd)/vim/spell ~/.vim/spell
+ln -sf $(pwd)/vim/ftplugin ~/.vim/ftplugin
 
 PLUGINS=(
   'https://github.com/tpope/vim-sensible'

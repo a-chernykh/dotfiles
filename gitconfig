@@ -1,6 +1,6 @@
 [user]
-	name = Andrey Chernih
-	email = andrey.chernih@gmail.com
+	name = Andrey Chernykh
+	email = andrey@docyt.com
 [color]
   ui = auto
 [color "branch"]
@@ -28,3 +28,5 @@
   tool = opendiff
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
+[pager]
+	branch = false
