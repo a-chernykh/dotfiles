@@ -20,6 +20,11 @@ set foldmethod=indent
 set foldlevel=20
 set autoread
 
+" Paste toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 " remap ESC button
 inoremap jj <Esc>
 
