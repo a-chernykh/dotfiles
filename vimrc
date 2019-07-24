@@ -2,6 +2,12 @@ execute pathogen#infect()
 
 set rtp+=/usr/local/opt/fzf
 
+" Performance
+" https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+set re=1
+set ttyfast
+set lazyredraw
+
 " General settings
 syntax on
 set nocompatible
@@ -57,6 +63,7 @@ nnoremap ,l :ALEToggle<CR>
 nnoremap ,f :ALEFix<CR>
 nnoremap ,d :ALEGoToDefinition<CR>
 " let g:ale_fix_on_save = 1
+let g:ale_cache_executable_check_failures=1
 
 " Jump to definition in new tab by Ctrl-o
 " nnoremap <C-o> <C-w><C-]><C-w>T
@@ -97,6 +104,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeCascadeSingleChildDir = 0
 let NERDTreeCascadeOpenSingleChildDir = 0
 let NERDTreeIgnore=['\.pyc$']
+let NERDTreeRespectWildIgnore=1
 
 " MultiCursor
 let g:multi_cursor_use_default_mapping=0
@@ -164,3 +172,5 @@ if !exists("*RunSpec")
     execute @z
   endfunction
 endif
+
+map ,r :w<CR>:execute @z<CR>
