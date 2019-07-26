@@ -168,9 +168,9 @@ if !exists("*RunSpec")
     endif
 
     let rspec_current_cmd = g:rspec_cmd . " " . rspec_args . " " . a:file
-    let @z = "!echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
-    execute @z
+    let @z = "echo 'Running " . rspec_current_cmd . "' && " . rspec_current_cmd
+    execute "Dispatch" @z
   endfunction
 endif
 
-map ,r :w<CR>:execute @z<CR>
+map ,r :w<CR>:execute "Dispatch" @z<CR>

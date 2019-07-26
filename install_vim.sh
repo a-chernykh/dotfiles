@@ -33,6 +33,8 @@ PLUGINS=(
   'https://github.com/w0rp/ale.git'
 
   'https://github.com/bkad/CamelCaseMotion.git'
+
+  'https://tpope.io/vim/dispatch.git'
 )
 
 for url in ${PLUGINS[@]}; do
