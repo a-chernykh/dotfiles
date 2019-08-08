@@ -25,6 +25,9 @@ set noswapfile
 set foldmethod=indent
 set foldlevel=20
 set autoread
+set hidden
+
+let mapleader=","
 
 " Paste toggle
 nnoremap <F2> :set invpaste paste?<CR>
@@ -52,16 +55,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Copy current file path to clipboard
-map ,p :execute "!echo %\|pbcopy"<CR>
+map <leader>p :execute "!echo %\|pbcopy"<CR>
 
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
 
 " ALE
-nnoremap ,l :ALEToggle<CR>
-nnoremap ,f :ALEFix<CR>
-nnoremap ,d :ALEGoToDefinition<CR>
+nnoremap <leader>l :ALEToggle<CR>
+nnoremap <leader>f :ALEFix<CR>
+nnoremap <leader>d :ALEGoToDefinition<CR>
 " let g:ale_fix_on_save = 1
 let g:ale_cache_executable_check_failures=1
 
@@ -70,8 +73,9 @@ let g:ale_cache_executable_check_failures=1
 
 " fzf
 nnoremap <c-p> :Files<CR>
-nnoremap ,m :BTags<CR>
-nnoremap ,a :Tags<CR>
+nnoremap <c-b> :Buffers<CR>
+nnoremap <leader>m :BTags<CR>
+nnoremap <leader>a :Tags<CR>
 
 " global key mappings
 map <CR> :nohl<CR>
@@ -131,9 +135,9 @@ autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
 " Browser reload
 " https://github.com/mkitt/browser-refresh.vim
-let g:RefreshRunningBrowserDefault = 'chrome'
-let g:RefreshRunningBrowserReturnFocus = 0
-map ,b :RRB<CR>
+"let g:RefreshRunningBrowserDefault = 'chrome'
+"let g:RefreshRunningBrowserReturnFocus = 0
+"map ,b :RRB<CR>
 
 " Syntax highlighting
 au BufNewFile,BufRead *.coffee.erb set filetype=coffee
@@ -173,4 +177,4 @@ if !exists("*RunSpec")
   endfunction
 endif
 
-map ,r :w<CR>:execute "Dispatch" @z<CR>
+map <leader>r :w<CR>:execute "Dispatch" @z<CR>
