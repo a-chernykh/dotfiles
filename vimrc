@@ -23,9 +23,18 @@ set hlsearch
 set incsearch
 set noswapfile
 set foldmethod=indent
+set autoindent
+set copyindent
+set showmatch
 set foldlevel=20
+set ignorecase
+set smartcase
+set smarttab
 set autoread
 set hidden
+set title
+set visualbell
+set noerrorbells
 
 let mapleader=","
 
