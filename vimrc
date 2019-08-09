@@ -33,8 +33,8 @@ set smarttab
 set autoread
 set hidden
 set title
-set visualbell
-set noerrorbells
+"set visualbell
+"set noerrorbells
 
 let mapleader=","
 
