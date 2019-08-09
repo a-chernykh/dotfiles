@@ -82,7 +82,7 @@ let g:ale_cache_executable_check_failures=1
 
 " fzf
 nnoremap <c-p> :Files<CR>
-nnoremap <c-b> :Buffers<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :BTags<CR>
 nnoremap <leader>a :Tags<CR>
 
