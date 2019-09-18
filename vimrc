@@ -164,7 +164,7 @@ autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <c-g> :Ack "\b<C-R><C-W>\b"<CR>
+nnoremap <c-g> :Ack! "\b<C-R><C-W>\b"<CR>
 
 " vim-javascript js javascript jsx
 let g:javascript_plugin_jsdoc = 1
