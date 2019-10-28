@@ -92,7 +92,7 @@ map <CR> :nohl<CR>
 
 " ignore
 set wildignore+=*/log/*,*/tmp/*,*.swp,*/spec/vcr_fixtures/*,*/spec/fixtures/vcr_cassettes/*,*/bundle/cache/*,*/node_modules/*
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore log --ignore tmp --ignore spec/vcr_fixtures --ignore spec/fixtures/vcr_cassette --ignore bundle/cache --ignore node_modules -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --hidden --files'
 
 " NerdTree
 function! IsNERDTreeOpen()
@@ -161,10 +161,10 @@ autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,conf
 autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 
 " Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
 endif
-nnoremap <c-g> :Ack! "\b<C-R><C-W>\b"<CR>
+nnoremap <c-g> :Ack! "\b<C-r><C-w>\b"<CR>
 
 " vim-javascript js javascript jsx
 let g:javascript_plugin_jsdoc = 1
