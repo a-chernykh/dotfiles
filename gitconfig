@@ -17,7 +17,8 @@
   changed = green
   untracked = cyan
 [credential]
-  helper = osxkeychain
+	helper = !aws --profile default codecommit credential-helper $@
+	UseHttpPath = true
 [core]
   excludesfile = ~/.gitignore_global
 [alias]
