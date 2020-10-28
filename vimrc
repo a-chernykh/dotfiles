@@ -4,7 +4,7 @@ set rtp+=/usr/local/opt/fzf
 
 " Performance
 " https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
-set re=1
+" set re=1
 set ttyfast
 set lazyredraw
 
@@ -142,6 +142,9 @@ set smartindent
 let leave_spaces_in = [ 'md', 'markdown' ]
 autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
+" Autoformat
+autocmd BufWrite *.py :Autoformat
+
 " Browser reload
 " https://github.com/mkitt/browser-refresh.vim
 "let g:RefreshRunningBrowserDefault = 'chrome'
@@ -162,7 +165,7 @@ autocmd BufRead,BufNewFile {.babelrc} set ft=javascript
 
 " Ack
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
+  let g:ackprg = 'rg --sort path --vimgrep'
 endif
 nnoremap <c-g> :Ack! "\b<C-r><C-w>\b"<CR>
 
