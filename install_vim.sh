@@ -28,13 +28,14 @@ PLUGINS=(
   'https://github.com/pangloss/vim-javascript.git'
   'https://github.com/mxw/vim-jsx.git'
   'https://github.com/tmux-plugins/vim-tmux-focus-events.git'
-  'https://github.com/leafgarland/typescript-vim.git'
 
   'https://github.com/w0rp/ale.git'
 
   'https://github.com/bkad/CamelCaseMotion.git'
 
   'https://tpope.io/vim/dispatch.git'
+
+  'https://github.com/Chiel92/vim-autoformat.git'
 )
 
 for url in ${PLUGINS[@]}; do
@@ -42,7 +43,9 @@ for url in ${PLUGINS[@]}; do
   dir="$HOME/.vim/bundle/$plugin"
 
   if [ -d $dir ]; then
-    echo "Skipping $plugin"
+    echo "Updating $plugin"
+    cd $dir
+    git pull
   else
     echo "Installing $plugin"
     git clone $url $dir
