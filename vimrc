@@ -143,7 +143,7 @@ let leave_spaces_in = [ 'md', 'markdown' ]
 autocmd BufWritePre * if index(leave_spaces_in, &ft) < 0 | :%s/\s\+$//e
 
 " Autoformat
-autocmd BufWrite *.py :Autoformat
+" autocmd BufWrite *.py :Autoformat
 
 " Browser reload
 " https://github.com/mkitt/browser-refresh.vim
