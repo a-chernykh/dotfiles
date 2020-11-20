@@ -31,3 +31,5 @@
 	insteadOf = https://bitbucket.org/
 [pager]
 	branch = false
+[pull]
+	rebase = false
