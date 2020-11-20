@@ -13,6 +13,7 @@ PACKAGES=(
   ctop
   cmake
   direnv
+  ncdu
   fzf
   git
   gnupg
