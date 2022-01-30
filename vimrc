@@ -43,6 +43,9 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" Easier paste from the yank buffer
+noremap <leader>p "0p
+
 " remap ESC button
 inoremap jj <Esc>
 
@@ -63,8 +66,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Copy current file path to clipboard
-map <leader>p :execute "!echo %\|pbcopy"<CR>
 
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
@@ -81,7 +82,7 @@ let g:ale_cache_executable_check_failures=1
 " nnoremap <C-o> <C-w><C-]><C-w>T
 
 " fzf
-nnoremap <c-p> :Files<CR>
+nnoremap <c-p> :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :BTags<CR>
 nnoremap <leader>a :Tags<CR>
